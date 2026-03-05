@@ -1,0 +1,343 @@
+.match-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 3rem 4rem;
+}
+
+.match-page h1 {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 0.25rem;
+}
+
+.match-subtitle {
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+/* ── How It Works strip ────────────────────────────────────── */
+.match-how {
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  background: #000000;
+}
+
+.match-how-title {
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #E8008A;
+  margin: 0 0 1.25rem;
+}
+
+.match-how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.match-how-card {
+  border-left: 2px solid rgba(255, 255, 255, 0.12);
+  padding-left: 1rem;
+}
+
+.match-how-num {
+  display: block;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #E8008A;
+  opacity: 0.35;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.match-how-step-title {
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin: 0 0 0.4rem;
+}
+
+.match-how-step-desc {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Form ──────────────────────────────────────────────────── */
+.match-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.match-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.match-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.match-form label,
+.match-form-field label {
+  font-weight: 900;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.5rem;
+  color: #000000;
+}
+
+.match-form input,
+.match-form select {
+  padding: 0.65rem 0.75rem;
+  border: 2px solid #000000;
+  border-radius: 0;
+  font-size: 0.92rem;
+  font-family: inherit;
+  transition: border-color 0.15s;
+  background: #ffffff;
+}
+
+.match-form input:focus,
+.match-form select:focus {
+  outline: none;
+  border-color: #E8008A;
+}
+
+.match-form textarea {
+  padding: 0.75rem;
+  border: 2px solid #000000;
+  border-radius: 0;
+  font-size: 0.92rem;
+  font-family: inherit;
+  resize: vertical;
+  line-height: 1.5;
+  transition: border-color 0.15s;
+}
+
+.match-form textarea:focus {
+  outline: none;
+  border-color: #E8008A;
+}
+
+.match-form button[type="submit"] {
+  align-self: flex-start;
+  margin-top: 0.75rem;
+  padding: 0.85rem 2rem;
+  background: #E8008A;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.match-form button[type="submit"]:hover:not(:disabled) {
+  background: #c4006f;
+}
+
+.match-form button[type="submit"]:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-spinner-sm {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+/* ── Loading ───────────────────────────────────────────────── */
+.match-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  color: #555;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #e0e0e0;
+  border-top-color: #E8008A;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Error ─────────────────────────────────────────────────── */
+.match-error {
+  padding: 1rem;
+  background: #fff0f6;
+  border-left: 4px solid #E8008A;
+  color: #000000;
+  font-weight: 600;
+}
+
+/* ── Results ───────────────────────────────────────────────── */
+.match-summary {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid #00B2A9;
+  padding-left: 0.75rem;
+  line-height: 1.6;
+}
+
+.match-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.match-card {
+  border: 2px solid #000000;
+  background: #ffffff;
+  overflow: hidden;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.match-card:hover {
+  box-shadow: 5px 5px 0px #E8008A;
+  transform: translate(-2px, -2px);
+}
+
+.match-card-image {
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 2px solid #000000;
+}
+
+.match-card-body {
+  padding: 1.1rem 1.25rem 1.25rem;
+}
+
+.match-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+  gap: 0.75rem;
+}
+
+.match-material {
+  font-weight: 900;
+  font-size: 0.98rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.match-score {
+  color: white;
+  font-weight: 900;
+  font-size: 0.78rem;
+  padding: 0.22rem 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Progress bar */
+.match-bar-track {
+  height: 4px;
+  background: #ebebeb;
+  margin-bottom: 0.85rem;
+}
+
+.match-bar-fill {
+  height: 100%;
+  transition: width 0.6s ease;
+}
+
+.match-reason {
+  color: #444;
+  font-size: 0.9rem;
+  margin: 0 0 0.85rem;
+  line-height: 1.55;
+}
+
+/* Meta row */
+.match-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.82rem;
+}
+
+.match-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.match-meta-label {
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #aaa;
+}
+
+.match-qty-warning {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: #fff3e0;
+  color: #e65100;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid #e65100;
+  margin-left: 0.25rem;
+}
+
+/* Request button on card */
+.match-request-btn {
+  padding: 0.55rem 1.25rem;
+  background: #E8008A;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.match-request-btn:hover {
+  background: #c4006f;
+}
